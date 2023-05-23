@@ -78,11 +78,20 @@ export default {
   template: `
 <div class="h-screen flex items-center">
   <div class="max-w-[1000px] mx-auto">
+    <div class="mt-10 mb-10 mx-auto max-w-screen-xl px-4 sm:px-6">
+      <div class="text-center">
+        <h1 class="text-xl tracking-tight font-extrabold text-gray-900 sm:text-2xl md:text-3xl">
+          <span class="block xl:inline">Tailwind CSS</span>
+          <span class="hidden xl:inline-block">&nbsp;</span>
+          <span class="block text-indigo-600 xl:inline">Calculator</span>
+        </h1>
+      </div>
+    </div>
     <form novalidate class="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
       <div class="space-y-12 sm:col-span-1">
         <div>
-          <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
-          <p class="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
+          <h2 class="text-base font-semibold leading-7 text-gray-900">Calculator</h2>
+          <p class="mt-1 text-sm leading-6 text-gray-600">Utilities for controlling the <span class="font-bold text-blue-400">space size</span> of an element.</p>
     
           <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           
@@ -128,7 +137,7 @@ export default {
   
       <fieldset class="sm:col-span-1">
           <legend class="text-base font-semibold leading-6 text-gray-900">Font Size</legend>
-          <p class="mt-1 text-sm leading-6 text-gray-600">Utilities for controlling the font size of an element.</p>
+          <p class="mt-1 text-sm leading-6 text-gray-600">Utilities for controlling the <span class="font-bold text-blue-400">font size</span> of an element.</p>
           <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div v-for="(value, key) of fontSize" class="flex items-center gap-x-3 sm:col-span-2">
               <input :id="key" :checked="value === inRem" name="push-notifications" type="radio" disabled class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
