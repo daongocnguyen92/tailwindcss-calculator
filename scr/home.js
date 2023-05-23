@@ -79,8 +79,9 @@ export default {
 <div class="h-screen flex items-center">
   <div class="max-w-[1000px] mx-auto">
     <div class="mt-10 mb-10 mx-auto max-w-screen-xl px-4 sm:px-6">
-      <div class="text-center">
-        <h1 class="text-xl tracking-tight font-extrabold text-gray-900 sm:text-2xl md:text-3xl">
+      <div class="text-center flex items-center justify-center">
+        <img src="../access/avatar.jpg" alt="" class="rounded-full w-28 mr-5">
+        <h1 class="text-xl tracking-tight font-extrabold text-gray-900 sm:text-2xl md:text-3xl flex">
           <span class="block xl:inline">Tailwind CSS</span>
           <span class="hidden xl:inline-block">&nbsp;</span>
           <span class="block text-indigo-600 xl:inline">Calculator</span>
