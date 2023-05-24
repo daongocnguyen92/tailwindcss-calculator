@@ -3,8 +3,7 @@ export default {
 <div class="px-4 sm:px-6 lg:px-8">
   <div class="sm:flex sm:items-center">
     <div class="sm:flex-auto">
-      <h1 class="text-base font-semibold leading-6 text-gray-900">Users</h1>
-      <p class="mt-2 text-sm text-gray-700">A list of all the users in your account including their name, title, email and role.</p>
+      <h1 class="text-base font-semibold leading-6 text-gray-900">Unit Conversion Table <span class="text-sm text-gray-400 font-normal">(In root font size: {{rootFontSize}}px)</span></h1>
     </div>
   </div>
   <div class="mt-8 flow-root">
@@ -17,9 +16,6 @@ export default {
               <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-violet-70 bg-violet-50">REM</th>
               <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-emerald-700 bg-emerald-50">Pixel</th>
               <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Percent</th>
-              <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-0">
-                <span class="sr-only">Edit</span>
-              </th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-200">
