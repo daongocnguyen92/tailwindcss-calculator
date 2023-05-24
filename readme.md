@@ -3,7 +3,7 @@
 <h3 id="sobre">:information_source: About</h3>
 > Utilities for controlling the space size and font size of an element.
 
-<img src="https://raw.githubusercontent.com/daongocnguyen92/tailwindcss-calculator/main/access/Screenshot.png" width="100px;" alt=""/>
+<img style="margin-top: 30px" src="https://raw.githubusercontent.com/daongocnguyen92/tailwindcss-calculator/main/access/Screenshot.png" alt=""/>
 
 Combined idea based on codebeautify.org and tailwindcss-calculator.com along with a few of my ideas  ❤️ .<br />
 Thanks for visiting and good coding!
