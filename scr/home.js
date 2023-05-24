@@ -1,9 +1,12 @@
-// my-component.js
+import unitConversionTable from './unitConversionTable.js';
 const rootFontSizeKey = 'rootFontSize';
 export default {
+  components: {
+    'unit-conversion-table': unitConversionTable,
+  },
   data() {
     return {
-      rootFontSize: localStorage.getItem(rootFontSizeKey) || 16,
+      rootFontSize: parseInt(localStorage.getItem(rootFontSizeKey) || 0) || 16,
       inPixel: 16,
       inTw: 4,
       inRem: 1,
@@ -21,7 +24,6 @@ export default {
         'text-7xl': 4.5,
         'text-8xl': 6,
         'text-9xl': 8,
-
       }
     }
   },
@@ -71,14 +73,13 @@ export default {
       }
     },
     changeFont: function (size){
-      console.log('size', size);
       this.inRem = size;
       this.triggerChangeInput({}, 'inRem')
     }
   },
   template: `
-<div class="xl:h-screen flex items-center">
-  <div class="max-w-[1000px] mx-auto">
+<div class="xl:h-screen">
+  <div class="max-w-[700px] mx-auto border-0 border-b border-gray-300 border-solid pb-5">
     <div class="mt-10 mb-10 mx-auto max-w-screen-xl px-4 sm:px-6">
       <div class="text-center flex items-center justify-center">
         <img src="https://raw.githubusercontent.com/daongocnguyen92/tailwindcss-calculator/main/access/avatar.jpg" alt="" class="rounded-full w-28 mr-5">
@@ -88,13 +89,14 @@ export default {
         </h1>
       </div>
     </div>
+    
     <form novalidate class="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
       <div class="space-y-12 sm:col-span-1">
         <div>
           <h2 class="text-base font-semibold leading-7 text-gray-900">Calculator</h2>
           <p class="mt-1 text-sm leading-6 text-gray-600">Utilities for controlling the <span class="font-bold text-blue-400">space size</span> of an element.</p>
     
-          <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
           
             <div class="sm:col-span-6">
               <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Root font size</label>
@@ -147,6 +149,11 @@ export default {
           </div>
         </fieldset>
     </form>
+    
+  </div>
+  
+  <div class="container mx-auto pt-10">
+    <unit-conversion-table :rootFontSize="rootFontSize" :ratio="ratio" />
   </div>
 </div>
 `
