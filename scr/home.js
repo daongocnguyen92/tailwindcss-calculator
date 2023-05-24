@@ -71,20 +71,20 @@ export default {
       }
     },
     changeFont: function (size){
-      this.rootFontSize = size;
-      this.triggerChangeInput({}, 'rootFontSize')
+      console.log('size', size);
+      this.inRem = size;
+      this.triggerChangeInput({}, 'inRem')
     }
   },
   template: `
-<div class="h-screen flex items-center">
+<div class="xl:h-screen flex items-center">
   <div class="max-w-[1000px] mx-auto">
     <div class="mt-10 mb-10 mx-auto max-w-screen-xl px-4 sm:px-6">
       <div class="text-center flex items-center justify-center">
-        <img src="../access/avatar.jpg" alt="" class="rounded-full w-28 mr-5">
+        <img src="https://raw.githubusercontent.com/daongocnguyen92/tailwindcss-calculator/main/access/avatar.jpg" alt="" class="rounded-full w-28 mr-5">
         <h1 class="text-xl tracking-tight font-extrabold text-gray-900 sm:text-2xl md:text-3xl flex">
           <span class="block xl:inline">Tailwind CSS</span>
-          <span class="hidden xl:inline-block">&nbsp;</span>
-          <span class="block text-indigo-600 xl:inline">Calculator</span>
+          <span class="block text-indigo-600 xl:inline ml-1">Calculator</span>
         </h1>
       </div>
     </div>
@@ -142,7 +142,7 @@ export default {
           <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div v-for="(value, key) of fontSize" class="flex items-center gap-x-3 sm:col-span-2">
               <input :id="key" :checked="value === inRem" name="push-notifications" type="radio" disabled class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-              <label @click="changeFont(value)" for="push-everything" class="block text-sm font-medium leading-6 text-gray-900" :class="{'text-red-500': value === inRem}">{{ key }}</label>
+              <label @click="changeFont(value)" for="push-everything" class="block text-sm font-medium leading-6 text-gray-900 cursor-pointer" :class="{'text-indigo-500': value === inRem}">{{ key }}</label>
             </div>
           </div>
         </fieldset>
