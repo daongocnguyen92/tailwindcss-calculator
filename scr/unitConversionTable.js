@@ -12,7 +12,7 @@ export default {
         <table class="min-w-full divide-y divide-gray-300">
           <thead>
             <tr>
-              <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Tw config</th>
+              <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0 w-40">Tw default config</th>
               <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">EM</th>
               <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-violet-70 bg-violet-50">REM</th>
               <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-emerald-700 bg-emerald-50">Pixel</th>
