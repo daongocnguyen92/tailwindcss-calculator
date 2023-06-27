@@ -10,6 +10,43 @@ export default {
       inPixel: 16,
       inTw: 4,
       inRem: 1,
+      spacing: {
+        px: '1px',
+        0: '0px',
+        0.5: '0.125rem',
+        1: '0.25rem',
+        1.5: '0.375rem',
+        2: '0.5rem',
+        2.5: '0.625rem',
+        3: '0.75rem',
+        3.5: '0.875rem',
+        4: '1rem',
+        5: '1.25rem',
+        6: '1.5rem',
+        7: '1.75rem',
+        8: '2rem',
+        9: '2.25rem',
+        10: '2.5rem',
+        11: '2.75rem',
+        12: '3rem',
+        14: '3.5rem',
+        16: '4rem',
+        20: '5rem',
+        24: '6rem',
+        28: '7rem',
+        32: '8rem',
+        36: '9rem',
+        40: '10rem',
+        44: '11rem',
+        48: '12rem',
+        52: '13rem',
+        56: '14rem',
+        60: '15rem',
+        64: '16rem',
+        72: '18rem',
+        80: '20rem',
+        96: '24rem',
+      },
       fontSize: {
         'text-xs': 0.75,
         'text-sm': 0.875,
@@ -35,6 +72,9 @@ export default {
       // `this` points to the vm instance
       return this.rootFontSize / 4
     },
+    isReadyInConfig: function () {
+      return !!this.spacing[this.inTw]
+    }
   },
   created: function () {
     if (!localStorage.getItem(rootFontSizeKey)) {
@@ -131,7 +171,7 @@ export default {
               <div class="mt-2">
                 <input :value="inConfig" readonly type="text" name="inConfig" id="inConfig" class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
               </div>
-              <p class="text-gray-400 text-sm mt-1">(already available in the default configuration)</p>
+              <p v-show="isReadyInConfig" class="text-green-500 text-sm mt-1">(already available in the default configuration)</p>
             </div>
             
           </div>
