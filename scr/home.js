@@ -122,7 +122,7 @@ export default {
   <div class="max-w-[700px] mx-auto border-0 border-b border-gray-300 border-solid pb-5">
     <div class="mt-10 mb-10 mx-auto max-w-screen-xl px-4 sm:px-6">
       <div class="text-center flex items-center justify-center">
-        <img src="https://raw.githubusercontent.com/daongocnguyen92/tailwindcss-calculator/main/access/avatar.jpg" alt="" class="rounded-full w-28 mr-5">
+        <img src="https://w7.pngwing.com/pngs/293/485/png-transparent-tailwind-css-hd-logo.png" alt="" class="rounded-full w-28 mr-5">
         <h1 class="text-xl tracking-tight font-extrabold text-gray-900 sm:text-2xl md:text-3xl flex">
           <span class="block xl:inline">Tailwind CSS</span>
           <span class="block text-indigo-600 xl:inline ml-1">Calculator</span>
